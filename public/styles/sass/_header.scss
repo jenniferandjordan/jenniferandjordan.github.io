@@ -1,0 +1,80 @@
+$header: 90px;
+
+body.loaded {
+	#main {
+		h1, h2 {
+			display: block;
+		}
+	}
+
+	header {
+		display: block;
+	}
+}
+
+header {
+	position: fixed;
+	width: 100%;
+	left: 0;
+	height: $header;
+	background: $white;
+	border-bottom: 1px solid $grey;
+	z-index:3;
+	display: none;
+	@include fadeInDown(1.3s);
+
+	$arrow-width: 300px;
+	#arrow {
+		display: block;
+		width: $arrow-width;
+		height: auto;
+		position: absolute;
+		left: 50%;
+		margin-left: -$arrow-width / 2;
+		top: 0px;
+		z-index: 4;
+	}
+
+	.inner {
+		width: 700px;
+		display: block;
+		margin: 0 auto;
+	}
+
+	nav {
+		padding-top: ($header - 20px) / 2;
+		position: relative;
+		z-index: 5;
+		a {
+			text-decoration: none;
+			color: $black;
+			text-transform: uppercase;
+			font-family: 'Gill Sans';
+			font-weight: 200;
+			float: left;
+			font-size: 20px;
+			display: inline;
+		
+			&:hover {
+				border-bottom: 1px solid $black;
+			}
+		}
+
+		li {
+			float: left;
+
+			&.knot img {
+				width: 40px;
+				margin: -10px 20px 0 20px;
+			}
+		}
+
+		&#left {
+			float: left;
+		}
+
+		&#right {
+			float: right;
+		}
+	}
+}

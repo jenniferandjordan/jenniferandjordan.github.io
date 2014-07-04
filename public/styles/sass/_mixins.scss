@@ -1,0 +1,35 @@
+// fade in up
+@include keyframes(fadeInUp) {
+  0% { 
+    opacity: 0;
+    @include transform(translateY(20px));
+  }
+ 
+  100% { 
+    opacity: 1;
+    @include transform(translateY(0px));
+  }
+}
+
+@mixin fadeInUp($time:.3s) {
+  @include animation(fadeInUp $time normal);
+
+}
+
+// fade in down
+@include keyframes(fadeInDown) {
+  0% { 
+    opacity: 0;
+    @include transform(translateY(-20px));
+  }
+ 
+  100% { 
+    opacity: 1;
+    @include transform(translateY(0px));
+  }
+}
+
+@mixin fadeInDown($time:.3s) {
+  @include animation(fadeInDown $time normal);
+ 
+}
