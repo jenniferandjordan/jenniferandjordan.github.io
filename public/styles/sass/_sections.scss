@@ -1,10 +1,18 @@
-#intro {
+section {
 	height: 100%;
 	width: 100%;
+	position: relative;
+	border-bottom: 1px solid $grey;
+	&.bg-image {
+		background-size: cover;
+		background-attachment: fixed;
+	}
+
+}
+
+#intro {
 	display: table;
-	@include background-image(url("../../images/bg.png"));
-	background-size: cover;
-	background-attachment: fixed;
+	@include background-image(url("../../images/bg-intro.png"));
 	opacity: 0;
 
 	#main {
@@ -37,18 +45,87 @@
 	}
 }
 
-#second {
-	@include background-image(url("../../images/bg-3.png"));
-	background-size: cover;
-	background-attachment: fixed;
-	height: 100%;
-	position: relative;
+#us {
+	@include background-image(url("../../images/bg.png"));
 }
 
-#third {
-	@include background-image(url("../../images/bg-4.png"));
-	background-size: cover;
-	background-attachment: fixed;
-	height: 100%;
-	position: relative;
+#story {
+
+}
+
+#weekend {
+	.third {
+		width: 33.33333%;
+		height: 100%;
+		position: relative;
+		float: left;
+		padding: 50px 30px;
+		@include box-sizing(border-box);
+
+		&:after {
+			content: "";
+			background: $grey;
+			height: 60%;
+			width: 1px;
+			display: block;
+			position: absolute;
+			right: 0;
+			top: 20%;
+		}
+
+		&:last-child {
+			&:after {
+				display: none;
+			}
+		}
+
+		.info {
+			* {
+				text-align: center;
+				font-family: $font-sans;
+			}
+
+			h1 {
+				font-size: 3em;
+				text-transform: uppercase;
+			}
+
+			h3 {
+				font-size: 1.5em;
+			}
+		}
+	}
+
+	.card {
+		width: 100%;
+		background: $white;
+		margin: 15px 0;
+		padding: 10px;
+		float: left;
+		@include box-sizing(border-box);
+		
+		h2 {
+			font-weight: 700;
+			font-size: 1.7em;
+			margin: .3em 0;
+		}
+
+		h4 {
+			font-size: 1.1em;
+			margin: .3em 0;
+		}
+
+		p {
+			font-size: 1em;
+			margin: 1em 0;
+			line-height: 1.4em;
+		}
+
+
+
+	}
+}
+
+#registry {
+
 }

@@ -23,7 +23,7 @@ header {
 	display: none;
 	@include fadeInDown(1.3s);
 
-	$arrow-width: 300px;
+	$arrow-width: 220px;
 	#arrow {
 		display: block;
 		width: $arrow-width;
@@ -32,19 +32,22 @@ header {
 		left: 50%;
 		margin-left: -$arrow-width / 2;
 		top: 0px;
-		z-index: 4;
+		z-index: 4;		
 	}
 
 	.inner {
-		width: 700px;
+		width: 800px;
 		display: block;
 		margin: 0 auto;
+		position: relative;
 	}
 
 	nav {
 		padding-top: ($header - 20px) / 2;
 		position: relative;
 		z-index: 5;
+		width: 400px - $arrow-width / 2 - 20px;
+
 		a {
 			text-decoration: none;
 			color: $black;
@@ -71,10 +74,20 @@ header {
 
 		&#left {
 			float: left;
+			padding-right: $arrow-width / 2 + 20px;
+
+			ul {
+				float: right;
+			}
 		}
 
 		&#right {
 			float: right;
+			padding-left: $arrow-width / 2 + 20px;
+
+			ul {
+				float: left;
+			}
 		}
 	}
 }

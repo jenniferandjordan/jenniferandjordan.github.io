@@ -11,10 +11,16 @@ $(window).load(function() {
 
 	$(document).scroll(function() {
 		var st = $(window).scrollTop();
-		var op = 1 - (st / intro * 2).toFixed(3);
+		var perc = ((intro - st) / intro).toFixed(2);
+		console.log(perc);
 
 		if (st > 0) {
-			
+			$('#main').css({
+				'-ms-transform': 'scale('+ perc +')',
+				'-webkit-transform': 'scale('+ perc +')',
+				'transform': 'scale('+ perc +')',
+				'opacity': perc
+			});
 		}
 		
 		// if (op <= .7) op = .7;
@@ -24,5 +30,17 @@ $(window).load(function() {
 		// 	'-webkit-transform': 'scale('+ op +')',
 		// 	'transform': 'scale('+ op +')',
 		// })
+	});
+
+	$('.nav-link').click(function(e) {
+		e.preventDefault();
+		var target = $(e.target).attr('href');
+		var targetY = $(target).offset().top - 90;
+
+		$('html, body').animate({
+			'scrollTop': targetY
+		}, 500);
+
+		return false;
 	});
 });
