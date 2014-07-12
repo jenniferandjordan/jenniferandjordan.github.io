@@ -1,6 +1,7 @@
 $(window).load(function() {
 	var intro = $('#intro').height();
 
+	// onload animations
 	$('#intro').animate({
 		'opacity': 1
 	}, 700);
@@ -9,10 +10,10 @@ $(window).load(function() {
 		$('body').addClass('loaded');
 	}, 1000);
 
+	// scrolling functions
 	$(document).scroll(function() {
 		var st = $(window).scrollTop();
 		var perc = ((intro - st) / intro).toFixed(2);
-		console.log(perc);
 
 		if (st > 0) {
 			$('#main').css({
@@ -22,16 +23,13 @@ $(window).load(function() {
 				'opacity': perc
 			});
 		}
-		
-		// if (op <= .7) op = .7;
-		// $('#main').css({
-		// 	'opacity': 1 - (st / intro * 2).toFixed(3),
-		// 	'-ms-transform': 'scale('+ op +')',
-		// 	'-webkit-transform': 'scale('+ op +')',
-		// 	'transform': 'scale('+ op +')',
-		// })
 	});
 
+	// init functions
+	init();
+});
+
+function init() {
 	$('.nav-link').click(function(e) {
 		e.preventDefault();
 		var target = $(e.target).attr('href');
@@ -43,4 +41,4 @@ $(window).load(function() {
 
 		return false;
 	});
-});
+}
