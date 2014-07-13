@@ -39,99 +39,32 @@
 }
 
 #weekend {
-
-	.third {
-		width: 33.33333%;
-		position: relative;
-		float: left;
-		padding: 50px 30px;
-		@include box-sizing(border-box);
-
-		&:after {
-			content: "";
-			background: $grey;
-			height: 60%;
-			width: 1px;
-			display: block;
-			position: absolute;
-			right: 0;
-			top: 20%;
-		}
-
-		&:last-child {
-			&:after {
-				display: none;
-			}
-		}
-
-		.info {
-			* {
-				text-align: center;
-				font-family: $font-sans;
-			}
-
-			h1 {
-				font-size: 3em;
-				text-transform: uppercase;
-			}
-
-			h3 {
-				font-size: 1.5em;
-			}
-		}
+	.day{
+		margin-bottom: 30px;
 	}
 
-	.card {
-		width: 100%;
-		background: $white;
-		margin: 15px 0;
-		padding: 10px;
-		float: left;
+	.day-info {
+		text-align: center;
+
+		h3 {
+			font-family: $font-serif;
+			font-size: 1.2em;
+			padding-bottom: 1em;
+		}
+	}	
+
+	.event {
+		border:1px solid $grey;
+		padding: 20px 30px;
 		@include box-sizing(border-box);
-		
-		h2 {
-			font-weight: 700;
-			font-size: 1.7em;
-			margin: .3em 0;
-		}
-
-		h4 {
-			font-size: 1.1em;
-			margin: .3em 0;
-		}
-
-		p {
-			font-size: 1em;
-			margin: 1em 0;
-			line-height: 1.4em;
-		}
-
-
-
 	}
 }
 
 #registry {
 
 	.inner {
-		padding: 60px;
-
-		h1 {
-			font-size: 3em;
-			text-align: center;
-			font-family: $font-sans;
-			text-transform: uppercase;
-			margin-bottom: .3em;
-		}
-
-		p {
-			font-size: 1.7em;
-			line-height: 1.7em;
-			text-align: justify;
-		}
 
 		nav {
-			padding-top: 20px;
 
 			a {
 				text-align: center;

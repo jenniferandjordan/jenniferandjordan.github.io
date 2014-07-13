@@ -23,6 +23,12 @@ $(window).load(function() {
 				'opacity': perc
 			});
 		}
+
+		if (st > (intro - 90)) {
+			$('header').addClass('small');
+		} else {
+			$('header').removeClass('small');
+		}
 	});
 
 	// init functions
@@ -33,7 +39,7 @@ function init() {
 	$('.nav-link').click(function(e) {
 		e.preventDefault();
 		var target = $(e.target).attr('href');
-		var targetY = $(target).offset().top - 90;
+		var targetY = $(target).offset().top - 50;
 
 		$('html, body').animate({
 			'scrollTop': targetY
