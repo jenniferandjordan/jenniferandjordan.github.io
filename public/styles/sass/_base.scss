@@ -27,14 +27,11 @@ section {
 		background-size: cover;
 		background-attachment: fixed;
 	}
-
-	.inner {
-		
-	}
 }
 
 .inner {
-	width: 800px;
+	width: 80%;
+	max-width: 800px;
 	display: block;
 	margin: 0 auto;
 	position: relative;
@@ -52,5 +49,19 @@ section {
 		font-size: 1.7em;
 		line-height: 1.7em;
 		text-align: justify;
+	}
+}
+
+@media screen and (max-width: 1000px) {
+	.inner {
+		width: 90%;
+
+		h1 {
+			font-size: 2em;
+		}
+
+		p {
+			font-size: 1em;
+		}
 	}
 }

@@ -17,6 +17,10 @@
 
 		span {
 			font-weight: 100;
+
+			@media screen and (max-width: 1000px) {
+				display: block;
+			}
 		}
 	}
 
@@ -27,6 +31,12 @@
 		font-family: 'Gill Sans';
 		font-weight: 400;
 		font-size: 1.1em;
+	}
+
+	@media screen and (max-width: 1000px) {
+		h1 {
+			font-size: 4em;
+		}
 	}
 }
 
@@ -54,8 +64,8 @@
 	}	
 
 	.event {
-		border:1px solid $grey;
-		padding: 20px 30px;
+		// border:1px solid $grey;
+		// padding: 20px 30px;
 		@include box-sizing(border-box);
 	}
 }
@@ -75,6 +85,10 @@
 				padding: .5em 0;
 				position: relative;
 				@include box-sizing(border-box);
+
+				@media screen and (max-width: 1000px) {
+					font-size: 1.4em;
+				}
 				
 				&:before, &:after {
 					color: darken(#3498db, 10%);
