@@ -28,7 +28,7 @@ header {
 		}
 
 		#arrow {
-			top: -20px;
+			top: -40px;
 		}
 
 		@media screen and (max-width: 1000px) {
@@ -71,7 +71,7 @@ header {
 			float: left;
 			font-size: 20px;
 			display: inline;
-		
+
 			&:hover {
 				border-bottom: 1px solid $black;
 			}

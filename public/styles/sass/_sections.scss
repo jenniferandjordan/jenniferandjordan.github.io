@@ -1,6 +1,6 @@
 #intro {
 	display: table;
-	@include background-image(url("../../images/bg-intro.png"));
+	@include background-image(url("../../images/bg-lines.png"));
 	opacity: 0;
 
 	#main {
@@ -41,7 +41,16 @@
 }
 
 #us {
-	@include background-image(url("../../images/bg.png"));
+	background: rgba(255, 255, 255, 0);
+
+	.regular {
+		@include background-image(url('../../images/trees.jpeg'));
+	}
+
+	.blurred {
+		@include background-image(url('../../images/trees-blurred.jpeg'));
+	}
+
 }
 
 #story {
@@ -49,6 +58,7 @@
 }
 
 #weekend {
+
 	.day{
 		margin-bottom: 30px;
 	}
@@ -61,7 +71,7 @@
 			font-size: 1.2em;
 			padding-bottom: 1em;
 		}
-	}	
+	}
 
 	.event {
 		// border:1px solid $grey;
@@ -73,7 +83,6 @@
 #registry {
 
 	.inner {
-
 		nav {
 
 			a {
@@ -89,7 +98,7 @@
 				@media screen and (max-width: 1000px) {
 					font-size: 1.4em;
 				}
-				
+
 				&:before, &:after {
 					color: darken(#3498db, 10%);
 					position: absolute;
@@ -125,4 +134,11 @@
 			}
 		}
 	}
+}
+
+.divider {
+	height: 20px;
+	width: 100%;
+	@include background-image(url("../../images/bg.jpg"));
+	background-attachment: fixed;
 }
