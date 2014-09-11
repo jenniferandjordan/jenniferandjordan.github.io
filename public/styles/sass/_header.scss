@@ -18,8 +18,9 @@ header {
 	top: 0;
 	background: $white;
 	border-bottom: 1px solid $grey;
-	z-index:9;
+	z-index:10;
 	display: none;
+
 	@include fadeInDown(1.3s);
 
 	&.small {
@@ -66,7 +67,7 @@ header {
 			text-decoration: none;
 			color: $black;
 			text-transform: uppercase;
-			font-family: 'Gill Sans';
+			font-family: $font-sans;
 			font-weight: 200;
 			float: left;
 			font-size: 20px;

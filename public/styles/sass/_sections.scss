@@ -28,9 +28,10 @@
 		text-transform: uppercase;
 		text-align: center;
 		margin-top: 60px;
-		font-family: 'Gill Sans';
+		font-family: $font-sans;
 		font-weight: 400;
-		font-size: 1.1em;
+		font-size: 1.4em;
+		letter-spacing: 2px;
 	}
 
 	@media screen and (max-width: 1000px) {
@@ -40,17 +41,28 @@
 	}
 }
 
-#us {
+#goof {
 	background: rgba(255, 255, 255, 0);
 
 	.regular {
-		@include background-image(url('../../images/trees.jpeg'));
+		@include background-image(url('../../images/goof-grey.jpg'));
 	}
 
 	.blurred {
-		@include background-image(url('../../images/trees-blurred.jpeg'));
+		@include background-image(url('../../images/goof.jpg'));
+	}
+}
+
+#goofed {
+	background: rgba(255, 255, 255, 0);
+
+	.regular {
+		@include background-image(url('../../images/goof.jpg'));
 	}
 
+	.blurred {
+		@include background-image(url('../../images/goof-blurred.jpg'));
+	}	
 }
 
 #story {

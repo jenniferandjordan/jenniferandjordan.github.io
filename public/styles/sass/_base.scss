@@ -36,6 +36,7 @@ section {
 	&.bg-image-bleed {
 		padding-top: 110vh;
 		padding-bottom: 80px;
+		border-bottom: none;
 		@include box-sizing(border-box);
 
 		.section-content {
@@ -47,26 +48,12 @@ section {
 			}
 		}
 	}
+
+	&.inverted {
+		background: $black;
+		color: $white;
+	}
 }
-//
-// .image-wrap {
-// 	display: block;
-// 	position: absolute;
-// 	width: 100%;
-// 	top: 0;
-// 	height: 110vh;
-//
-// 	.background-image {
-// 		display: block;
-// 		position: absolute;
-// 		top: 0;
-// 		left: 0;
-// 		right: 0;
-// 		height: 100vh;
-		// background-position: center;
-		// @include background-size(cover);
-// 	}
-// }
 
 .image-wrap {
 	position: absolute;
@@ -114,9 +101,19 @@ section {
 	}
 
 	p {
-		font-size: 1.7em;
-		line-height: 1.7em;
+		font-size: 1.5em;
+		line-height: 1.6em;
 		text-align: justify;
+		margin-bottom: .8em;
+		font-weight: 100;
+
+		.letter-large {
+			font-size: 2.2em;
+		}
+
+		.italic {
+			font-style: italic;
+		}
 	}
 }
 
