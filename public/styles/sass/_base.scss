@@ -77,15 +77,18 @@ section {
 }
 
 .timeline {
+	display: none;
+
 	&:before {
+		display: none;
 		content: '';
 		position: absolute;
 		top: 0;
-		width: 8px;
+		width: 4px;
 		background: $white;
 		height: 100%;
 		left: 50%;
-		margin-left: -4px;
+		margin-left: -2px;
 		z-index: 5;
 
 	}

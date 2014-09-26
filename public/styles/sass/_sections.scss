@@ -62,12 +62,25 @@
 		padding: 0em .4em;
 		height:130px;
 		line-height: 110px;
+		font-weight: bold;
 		@include box-sizing(border-box);
+
+		@media screen and (max-width: 1000px) {
+			font-size: .6em;
+			height: 90px;
+			line-height: 70px;
+		}
 	}
 
 	.section-content {
 		&.timeline::before {
 			top:130px;
+			height: calc(100% - 130px);
+
+			@media screen and (max-width: 1000px) {
+				top:90px;
+				height: calc(100% - 90px);		
+			}
 		}
 	}
 }
@@ -80,10 +93,27 @@
 	.blurred {
 		@include background-image(url('../../images/beach-blurred.jpg'));
 	}
-
 }
 
+#section-piggyback {
+	.regular {
+		@include background-image(url('../../images/piggyback.jpg'));
+	}
 
+	.blurred {
+		@include background-image(url('../../images/piggyback-blurred.jpg'));
+	}
+}
+
+#section-wheat {
+	.regular {
+		@include background-image(url('../../images/wheat.jpg'));
+	}
+
+	.blurred {
+		@include background-image(url('../../images/wheat-blurred.jpg'));
+	}
+}
 
 
 

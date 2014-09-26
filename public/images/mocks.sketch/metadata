@@ -15,6 +15,9 @@
 		<string>Karla-Regular</string>
 		<string>Karla-Regular</string>
 		<string>PlayfairDisplay-Regular</string>
+		<string>PlayfairDisplay-Regular</string>
+		<string>PlayfairDisplay-Regular</string>
+		<string>PlayfairDisplay-Bold</string>
 		<string>Karla-Regular</string>
 		<string>Karla-Regular</string>
 		<string>Karla-Regular</string>
@@ -32,7 +35,7 @@
 		<string>PlayfairDisplay-Bold</string>
 	</array>
 	<key>length</key>
-	<integer>7012442</integer>
+	<integer>7044502</integer>
 	<key>version</key>
 	<integer>18</integer>
 </dict>
