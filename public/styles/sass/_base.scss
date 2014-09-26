@@ -18,10 +18,12 @@ ul {
 
 section {
 	width: 100%;
+	min-height: 100%;	
 	position: relative;
-	border-bottom: 1px solid $grey;
 	overflow-x: hidden;
 	clear: both;
+	position: relative;
+	margin-bottom: 50px;
 
 	&.bg-image {
 		min-height: 100%;
@@ -29,39 +31,29 @@ section {
 		background-attachment: fixed;
 	}
 
-	&.section-text {
-		padding: 3em 0;
-	}
-
 	&.bg-image-bleed {
-		padding-top: 110vh;
-		padding-bottom: 80px;
-		border-bottom: none;
-		@include box-sizing(border-box);
-
-		.section-content {
-			z-index: 9;
-			position: relative;
-
-			p {
-				color: $grey;
-			}
-		}
+		background: rgba(255, 255, 255, 0);
 	}
 
-	&.inverted {
-		background: $black;
-		color: $white;
+	.section-content {
+		display: block;
+		position: relative;
+		width: 90%;
+		margin: 100% auto 0 auto;
+		color: white;
+		height: 500px;
+		font-size: 3em;
+		z-index: 3;
 	}
 }
 
 .image-wrap {
 	position: absolute;
 	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-
+	left: 5%;
+	width: 90%;
+	height: 100%;
+	
 	.image-full {
 		position: absolute;
 		top: 0;
@@ -81,6 +73,21 @@ section {
 	.blurred {
 		z-index: 2;
 		opacity: 0;
+	}
+}
+
+.timeline {
+	&:before {
+		content: '';
+		position: absolute;
+		top: 0;
+		width: 8px;
+		background: $white;
+		height: 100%;
+		left: 50%;
+		margin-left: -4px;
+		z-index: 5;
+
 	}
 }
 
@@ -106,9 +113,17 @@ section {
 		text-align: justify;
 		margin-bottom: .8em;
 		font-weight: 100;
+		font-family: $font-sans;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
 
 		.letter-large {
-			font-size: 2.2em;
+			font-size: 1.8em;
+			font-family: $font-serif;
+			text-transform: uppercase;
+			font-weight: bold;
 		}
 
 		.italic {

@@ -42,7 +42,7 @@ function fader() {
 		console.log(elView);
 
 		if (elView > 0) {
-			opacity = 1 / (wh + $(this).height()) * elView * 1.7;
+			opacity = 1 / (wh + $(this).height()) * elView * 2.1;
 
 
 			if (opacity < 1) $(this).css('opacity', opacity);

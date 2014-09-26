@@ -10,23 +10,29 @@
 	<string>b7d299b0a34651d1a0e066786b75aa36168d5809</string>
 	<key>fonts</key>
 	<array>
-		<string>GillSans-Light</string>
-		<string>GillSans-Light</string>
-		<string>GillSans-Light</string>
-		<string>GillSans-Light</string>
-		<string>GillSans</string>
+		<string>Karla-Regular</string>
+		<string>Karla-Regular</string>
+		<string>Karla-Regular</string>
+		<string>Karla-Regular</string>
+		<string>PlayfairDisplay-Regular</string>
+		<string>Karla-Regular</string>
+		<string>Karla-Regular</string>
+		<string>Karla-Regular</string>
+		<string>Karla-Regular</string>
+		<string>PlayfairDisplay-Regular</string>
+		<string>Karla-Regular</string>
 		<string>PlayfairDisplay-Bold</string>
-		<string>GillSans-Light</string>
-		<string>GillSans-Light</string>
-		<string>GillSans-Light</string>
-		<string>GillSans-Light</string>
+		<string>Karla-Regular</string>
+		<string>Karla-Regular</string>
+		<string>Karla-Regular</string>
+		<string>Karla-Regular</string>
 		<string>PlayfairDisplay-Bold</string>
 		<string>PlayfairDisplay-Bold</string>
 		<string>PlayfairDisplay-Bold</string>
 		<string>PlayfairDisplay-Bold</string>
 	</array>
 	<key>length</key>
-	<integer>5108959</integer>
+	<integer>7012442</integer>
 	<key>version</key>
 	<integer>18</integer>
 </dict>
