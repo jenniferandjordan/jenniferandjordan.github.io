@@ -42,6 +42,8 @@
 }
 
 #section-beginning {
+	display: table;
+
 	.regular {
 		@include background-image(url('../../images/piggyback.jpg'));
 	}
@@ -50,22 +52,28 @@
 		@include background-image(url('../../images/piggyback-blurred.jpg'));
 	}
 
-	#the-beginning {
-		text-align: center;
-		border: 8px solid $white;
-		background: rgba(255, 255, 255, .3);
-		font-family: $font-serif;
-		margin: 0;
-		padding: 0;
-		font-size: 1.6em;
-		text-transform: uppercase;
-		padding: 0em .4em;
-		height:130px;
-		line-height: 110px;
-		font-weight: bold;
-		@include box-sizing(border-box);
+	.section-content {
 		display: table-cell;
 		vertical-align: middle;
+		width: 100%;
+	}	
+
+	#the-beginning {
+		font-family: $font-serif;
+		font-size: 1.6em;
+		font-weight: bold;
+		text-transform: uppercase;
+		text-align: center;
+		padding: .2em 0;
+
+		border: 8px solid $white;
+		background: rgba(255, 255, 255, .3);
+		width: 100%;
+
+		@include box-sizing(border-box);
+
+		
+
 
 		@media screen and (max-width: 1000px) {
 			font-size: .6em;
