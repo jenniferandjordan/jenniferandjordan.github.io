@@ -1,4 +1,5 @@
 var intro = $('#intro').height();
+var wh = $(window).height();
 
 $(window).load(function() {
 	// onload animations
@@ -13,8 +14,7 @@ $(window).load(function() {
 
 	// init functions
 	init();
-	$(document).bind('scroll', fader);
-	$(document).bind('scroll', changeNavHeight);
+	$(document).bind('scroll', scrollEvents);
 });
 
 function init() {
@@ -30,8 +30,6 @@ function init() {
 			var targetY = $(target).offset().top - 50;
 		}
 
-
-
 		$('html, body').animate({
 			'scrollTop': targetY
 		}, 500);
@@ -40,17 +38,23 @@ function init() {
 	});
 }
 
-function fader() {
+function scrollEvents() {
+	var st = $(document).scrollTop();
+
+	fader(st);
+	changeNavHeight(st);
+	showTimelineBlock(st);
+}
+
+function fader(st) {
 	var blurred = $('.blurred'),
-			wh = $(window).height(),
-			st = $(document).scrollTop(),
 			elView, opacity;
 
 	blurred.each(function() {
-		elView = wh - ($(this).offset().top - st + 200);
+		elView = wh - ($(this).offset().top - st + 400);
 
 		if (elView > 0) {
-			opacity = 1 / (wh + $(this).height()) * elView * 2.1;
+			opacity = 1 / (wh + $(this).height()) * elView * 2;
 
 
 			if (opacity < 1) $(this).css('opacity', opacity);
@@ -58,9 +62,8 @@ function fader() {
 	});
 }
 
-function changeNavHeight() {
-	var st = $(document).scrollTop(),
-			percent = Number(((intro - st * 2) / intro).toFixed(2));
+function changeNavHeight(st) {
+	var percent = Number(((intro - st * 2) / intro).toFixed(2));
 
 	// set opacity of hero text
 	if (st > 0) {
@@ -76,3 +79,14 @@ function changeNavHeight() {
 		$('header').removeClass('small');
 	}
 }
+
+function showTimelineBlock(st) {
+	$('.timeline-block').each(function(index) {
+		if ($(this).offset().top <= (st + wh*.8) && 
+			$(this).find('.timeline-content').hasClass('is-hidden') ) {
+			$(this).find('.timeline-content').removeClass('is-hidden').addClass('bounce-in');
+		}
+	});
+}
+
+

@@ -49,7 +49,7 @@
 	}
 
 	.blurred {
-		@include background-image(url('../../images/piggyback-blurred.jpg'));
+		// @include background-image(url('../../images/piggyback.jpg'));
 	}
 
 	.section-content {
@@ -60,20 +60,15 @@
 
 	#the-beginning {
 		font-family: $font-serif;
-		font-size: 1.6em;
+		font-size: 4.6em;
 		font-weight: bold;
 		text-transform: uppercase;
 		text-align: center;
 		padding: .2em 0;
-
 		border: 8px solid $white;
-		background: rgba(255, 255, 255, .3);
+		background: rgba($white, .3);
 		width: 100%;
-
 		@include box-sizing(border-box);
-
-		
-
 
 		@media screen and (max-width: 1000px) {
 			font-size: .6em;

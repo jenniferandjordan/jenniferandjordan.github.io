@@ -29,13 +29,11 @@
 		<string>Karla-Regular</string>
 		<string>Karla-Regular</string>
 		<string>Karla-Regular</string>
-		<string>PlayfairDisplay-Bold</string>
-		<string>PlayfairDisplay-Bold</string>
-		<string>PlayfairDisplay-Bold</string>
-		<string>PlayfairDisplay-Bold</string>
+		<string>PlayfairDisplay-Regular</string>
+		<string>PlayfairDisplay-Regular</string>
 	</array>
 	<key>length</key>
-	<integer>7044502</integer>
+	<integer>7017216</integer>
 	<key>version</key>
 	<integer>18</integer>
 </dict>
