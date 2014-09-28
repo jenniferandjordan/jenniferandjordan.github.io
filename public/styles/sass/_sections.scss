@@ -172,7 +172,7 @@
 				text-align: center;
 				font-size: 1.7em;
 				text-decoration: none;
-				color: #3498db;
+				color: $red;
 				display: block;
 				padding: .5em 0;
 				position: relative;
@@ -183,7 +183,7 @@
 				}
 
 				&:before, &:after {
-					color: darken(#3498db, 10%);
+					color: darken($red, 10%);
 					position: absolute;
 					top:.5em;
 					display: block;
@@ -202,7 +202,7 @@
 				}
 
 				&:hover {
-					color: darken(#3498db, 10%);
+					color: darken($red, 10%);
 
 					&:before {
 						opacity: 1;

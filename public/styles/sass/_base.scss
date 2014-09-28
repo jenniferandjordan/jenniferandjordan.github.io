@@ -95,7 +95,6 @@ section {
 	@include box-sizing(border-box);
 	@include clearfix;
 
-
 	.timeline-content {
 		width: 40%;
 		background: $white-o;
@@ -163,6 +162,21 @@ section {
 		p {
 			line-height: 1.3em;
 			margin-bottom: .4em;
+
+			&.subtext {
+				font-size: 1em;
+				font-style: italic;
+			}
+		}
+
+		ul {
+			list-style-image: url('../../knot.png');
+			padding-left: 2em;
+
+			li {
+				line-height: 1.3em;
+				margin-bottom: .4em;
+			}
 		}
 	}
 }
