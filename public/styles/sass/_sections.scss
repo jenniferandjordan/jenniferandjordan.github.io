@@ -1,7 +1,9 @@
 #intro {
 	display: table;
-	@include background-image(url("../../images/bg-lines.png"));
+	position: relative;
+	height: 100%;
 	opacity: 0;
+	@include background-image(url("../../images/bg-lines.png"));
 
 	#main {
 		height: 100%;
@@ -43,6 +45,7 @@
 
 #section-beginning {
 	display: table;
+	height: 100%;
 
 	.regular {
 		@include background-image(url('../../images/piggyback.jpg'));
