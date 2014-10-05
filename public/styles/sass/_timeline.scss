@@ -18,6 +18,10 @@
 	padding: 2em 0;
 	position: relative;
 	@include clearfix;
+
+	&.offset {
+		margin-top: -6em;
+	}
 }
 
 .timeline-content {
@@ -30,6 +34,7 @@
 	border-width: 6px;
 	border-style: solid;
 	border-color: $silver-dark;
+	color: darken($silver-dark, 30%);
 	@include box-sizing(border-box);
 
 	&:before {
@@ -45,13 +50,13 @@
 
 	&.pull-right {
 		float: right;
-		color: $white;
-		background: $red;
-		border-color: $red-dark;
+		background: $gold;
+		border-color: $gold-dark;
+		color: darken($gold-dark, 30%);
 
 		&:before {
 			border-left: 20px solid transparent;
-			border-right: 20px solid $red-dark;
+			border-right: 20px solid $gold-dark;
 			right: 100%;
 			left: auto;
 		}

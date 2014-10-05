@@ -82,12 +82,19 @@ function changeNavHeight(st) {
 
 function showTimelineBlock(st) {
 	$('.timeline-block').each(function(index) {
+
 		if ($(this).offset().top <= (st + wh*.8) && 
 			$(this).find('.timeline-content').hasClass('is-hidden') ) {
 
 			$(this).find('.timeline-circle').removeClass('is-hidden').addClass('bounce');
 			$(this).find('.timeline-content').removeClass('is-hidden').addClass('bounce');
-		}
+		} 
+		// else if ( st > $(this).offset().top + $(this).height() && 
+		// 	$(this).find('.timeline-content').hasClass('bounce') ) {
+
+		// 	$(this).find('.timeline-circle').removeClass('bounce').addClass('is-hidden');
+		// 	$(this).find('.timeline-content').removeClass('bounce').addClass('is-hidden');
+		// }
 	});
 }
 

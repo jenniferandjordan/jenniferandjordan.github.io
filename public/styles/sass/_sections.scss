@@ -135,7 +135,6 @@
 }
 
 #section-five {
-	margin-bottom: 50px;
 	.regular {
 		@include background-image(url('../../images/bg-pics/sunset.jpg'));
 	}
@@ -145,105 +144,66 @@
 	}
 }
 
-
-
-
-
-
-
-
-
-
-#weekend {
-	@include background-image(url("../../images/bg-lines-2.png"));
-	@include background-size(cover);
-	background-attachment: fixed;
-	background-position: center;
-
-	.day{
-		margin-bottom: 30px;
+#section-six {
+	margin-bottom: 50px;
+	.regular {
+		@include background-image(url('../../images/bg-pics/sitting.jpg'));
 	}
 
-	.day-info {
-		text-align: center;
-
-		h3 {
-			font-family: $font-serif;
-			font-size: 1.2em;
-			padding-bottom: 1em;
-		}
-	}
-
-	.event {
-		// border:1px solid $grey;
-		// padding: 20px 30px;
-		@include box-sizing(border-box);
+	.blurred {
+		@include background-image(url('../../images/bg-pics/blurred/sitting-blurred.jpg'));
 	}
 }
 
+//***************
+// text sections
+//***************
 #registry {
-	@include background-image(url("../../images/bg-lines.png"));
-	@include background-size(cover);
-	background-attachment: fixed;
-	background-position: center;
+	a {
+		text-align: center;
+		font-size: 1.7em;
+		text-decoration: none;
+		color: $red;
+		display: block;
+		padding: .5em 0;
+		position: relative;
+		@include box-sizing(border-box);
 
-	.inner {
-		nav {
+		@media screen and (max-width: 1000px) {
+			font-size: 1.4em;
+		}
 
-			a {
-				text-align: center;
-				font-size: 1.7em;
-				text-decoration: none;
-				color: $red;
-				display: block;
-				padding: .5em 0;
-				position: relative;
-				@include box-sizing(border-box);
+		&:before, &:after {
+			color: darken($red, 10%);
+			position: absolute;
+			top:.5em;
+			display: block;
+			opacity: 0;
+			@include transition(all .2s ease-in-out);
+		}
 
-				@media screen and (max-width: 1000px) {
-					font-size: 1.4em;
-				}
+		&:before {
+			content: "[";
+			left: 40%;
+		}
 
-				&:before, &:after {
-					color: darken($red, 10%);
-					position: absolute;
-					top:.5em;
-					display: block;
-					opacity: 0;
-					@include transition(all .2s ease-in-out);
-				}
+		&:after {
+			content: "]";
+			right: 40%;
+		}
 
-				&:before {
-					content: "[";
-					left: 40%;
-				}
+		&:hover {
+			color: darken($red, 10%);
 
-				&:after {
-					content: "]";
-					right: 40%;
-				}
+			&:before {
+				opacity: 1;
+				left: 26%;
+			}
 
-				&:hover {
-					color: darken($red, 10%);
-
-					&:before {
-						opacity: 1;
-						left: 26%;
-					}
-
-					&:after {
-						opacity: 1;
-						right: 26%;
-					}
-				}
+			&:after {
+				opacity: 1;
+				right: 26%;
 			}
 		}
 	}
-}
-
-.divider {
-	height: 20px;
-	width: 100%;
-	@include background-image(url("../../images/bg.jpg"));
-	background-attachment: fixed;
 }
