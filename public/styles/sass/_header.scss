@@ -19,18 +19,17 @@ header {
 	background: transparent;
 	z-index:10;
 	display: none;
-
 	@include fadeInDown(1.3s);
 
 	&.small {
 		background: $white;
-		
-		nav {
-			padding: (($header-small - 20px) / 2) 0;
-		}
 
 		#arrow {
 			top: -40px;
+		}
+
+		ul li {
+			line-height: $header-small;
 		}
 
 		@media screen and (max-width: 1000px) {
@@ -57,99 +56,140 @@ header {
 		}
 	}
 
-	nav {
-		padding: (($header - 20px) / 2) 0;
-		position: relative;
-		z-index: 5;
-		width: 400px - $arrow-width / 2 - 20px;
-		@include transition(all .1s ease-in-out);
-
-		a {
-			text-decoration: none;
-			color: $black;
-			text-transform: uppercase;
-			font-family: $font-sans;
-			font-weight: 200;
-			float: left;
-			font-size: 20px;
-			display: none;
-
-			&:hover {
-				border-bottom: 1px solid $black;
-			}
-		}
-
-		ul {
-			list-style: none;
-		}
-
+	ul {
+		list-style: none;
+		text-align: center;
+		
 		li {
-			float: left;
+			display: inline;
+			margin: 0 25px;
+			line-height: $header;
+			@include transition(all .1s ease-in-out);
 
-			&.knot {
-				height: 20px;
+			&:nth-child(2) { margin-right: 100px; }
+			&:nth-child(3) { margin-left: 100px; }
 
-				img {
-					width: 40px;
-					margin: -10px 20px 0 20px;
-				}
+			a {
+				text-decoration: none;
+				color: $black;
+				font-family: $font-sans;
+				text-transform: uppercase;
+				font-size: 20px;
+				display: inline-block;
 			}
 		}
 
 		&#left {
-			float: left;
-			padding-right: $arrow-width / 2 + 20px;
+			padding-right: 120px;
 
-			ul {
-				float: right;
-			}
-		}
-
-		&#right {
-			float: right;
-			padding-left: $arrow-width / 2 + 20px;
-
-			ul {
+			li {
 				float: left;
 			}
 		}
 
-		@media screen and (max-width: 1000px) {
-			width: 50%;
-			@include box-sizing(border-box);
-
-			&#left {
-				padding-right: 45px;
-
-				a {
-					float: right;
-				}
-			}
-
-			&#right {
-				padding-left: 45px;
-
-				a {
-					float: left;
-				}
-			}
+		&#right {
+			padding-left: 120px;
 
 			li {
-				width: 100%;
-				display: block;
-
-				&:first-child {
-					margin-bottom: 15px;
-				}
-
-				&.knot {
-					display: none;
-				}
-			}
-
-			a {
-				font-size: 18px;
+				float: left;
 			}
 		}
 	}
 }
+
+	// nav {
+	// 	padding: (($header - 20px) / 2) 0;
+	// 	position: relative;
+	// 	z-index: 5;
+	// 	width: 400px - $arrow-width / 2 - 20px;
+	// 	@include transition(all .1s ease-in-out);
+
+	// 	a {
+	// 		text-decoration: none;
+	// 		color: $black;
+	// 		text-transform: uppercase;
+	// 		font-family: $font-sans;
+	// 		font-weight: 200;
+	// 		float: left;
+	// 		font-size: 20px;
+	// 		// display: none;
+
+	// 		&:hover {
+	// 			border-bottom: 1px solid $black;
+	// 		}
+	// 	}
+
+	// 	ul {
+	// 		list-style: none;
+	// 	}
+
+	// 	li {
+	// 		float: left;
+
+	// 		&.knot {
+	// 			height: 20px;
+
+	// 			img {
+	// 				width: 40px;
+	// 				margin: -10px 20px 0 20px;
+	// 			}
+	// 		}
+	// 	}
+
+	// 	&#left {
+	// 		float: left;
+	// 		padding-right: $arrow-width / 2 + 20px;
+
+	// 		ul {
+	// 			float: right;
+	// 		}
+	// 	}
+
+	// 	&#right {
+	// 		float: right;
+	// 		padding-left: $arrow-width / 2 + 20px;
+
+	// 		ul {
+	// 			float: left;
+	// 		}
+	// 	}
+
+	// 	@media screen and (max-width: 1000px) {
+	// 		width: 50%;
+	// 		@include box-sizing(border-box);
+
+	// 		&#left {
+	// 			padding-right: 45px;
+
+	// 			a {
+	// 				float: right;
+	// 			}
+	// 		}
+
+	// 		&#right {
+	// 			padding-left: 45px;
+
+	// 			a {
+	// 				float: left;
+	// 			}
+	// 		}
+
+	// 		li {
+	// 			width: 100%;
+	// 			display: block;
+
+	// 			&:first-child {
+	// 				margin-bottom: 15px;
+	// 			}
+
+	// 			&.knot {
+	// 				display: none;
+	// 			}
+	// 		}
+
+	// 		a {
+	// 			font-size: 18px;
+	// 		}
+	// 	}
+	// }
+
