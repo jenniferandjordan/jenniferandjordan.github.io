@@ -60,8 +60,7 @@ header {
 			line-height: $header;
 			@include transition(all .1s ease-in-out);
 
-			&:nth-child(2) { margin-right: 100px; }
-			&:nth-child(3) { margin-left: 100px; }
+			&:nth-child(2) { margin-right: 160px; }
 
 			a {
 				text-decoration: none;
@@ -76,28 +75,16 @@ header {
 				}
 			}
 
+			&:first-child {
+				margin-left: -16px;
+			}
+
 			@media screen and (max-width: $phone) {
 				margin: 0 10px !important;
 
 				a {
 					font-size: 12px;
 				}
-			}
-		}
-
-		&#left {
-			padding-right: 120px;
-
-			li {
-				float: left;
-			}
-		}
-
-		&#right {
-			padding-left: 120px;
-
-			li {
-				float: left;
 			}
 		}
 	}
