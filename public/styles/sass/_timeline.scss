@@ -106,7 +106,7 @@
 
 	@media screen and (max-width: $phone) {
 		margin-left: 40px;
-		width: 95%;
+		width: 90%;
 
 		&:before {
 			border-right: 20px solid $silver-dark;
@@ -146,7 +146,7 @@
 
 	@media screen and (max-width: $phone) {
 		left: 0;
-		margin-left: -40px;
+		margin-left: -24px;
 	}	
 }
 

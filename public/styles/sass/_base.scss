@@ -93,7 +93,6 @@ section {
 
 	.regular {
 		z-index: 1;
-
 	}
 
 	.blurred {
@@ -148,6 +147,10 @@ section {
 	ul.bullet-list {
 		padding-left: 2em;
 		list-style: none;
+
+		@media screen and (max-width: $tablet) {
+			padding-left:0;
+		}
 	}
 
 	li.bullets {
@@ -159,19 +162,25 @@ section {
 		background-image: url("../../images/icons/knot-white.png");
 		background-repeat: no-repeat;
 		background-position: 0px 9px;
+
+		@media screen and (max-width: $phone) {
+			font-size: .9em;
+			background-image: none;
+			padding-left:0;
+		}
 	}
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: $tablet) {
 	.inner {
 		width: 90%;
 
 		h1 {
-			font-size: 2.2em;
+			font-size: 1.4em;
 		}
 
-		p {
-			font-size: 1.5em;
+		p, li {
+			font-size: 1em;
 		}
 	}
 }
