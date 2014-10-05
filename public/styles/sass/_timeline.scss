@@ -11,6 +11,15 @@
 		height: 100%;
 		top: 0;
 	}
+
+	@media screen and (max-width: $phone) {
+
+		&:before {
+			left: 5%;
+			margin-left: 0px;
+			width: 4px;
+		}
+	}
 }
 
 .timeline-block {
@@ -21,6 +30,10 @@
 
 	&.offset {
 		margin-top: -6em;
+
+		@media screen and (max-width: $phone) {
+			margin-top: 0;
+		}
 	}
 }
 
@@ -60,6 +73,47 @@
 			right: 100%;
 			left: auto;
 		}
+
+		@media screen and (max-width: $phone) {
+			float: left;
+
+			&:before {
+				border-right: 20px solid $gold-dark;
+				border-left: 20px solid transparent;
+			}
+		}
+	}
+
+	&.is-same {
+		@media screen and (max-width: $phone) {
+			margin-top: 30px;
+			right:auto;
+
+			h2 {
+				display: none;
+			}
+
+			&:before {
+				border: 20px solid transparent;
+				border-bottom: 20px solid $gold-dark;
+				left:50%;
+				margin-left: -10px;
+				top: -40px;
+				bottom: auto;
+			}
+		}		
+	}
+
+	@media screen and (max-width: $phone) {
+		margin-left: 40px;
+		width: 95%;
+
+		&:before {
+			border-right: 20px solid $silver-dark;
+			border-left: 20px solid transparent;
+			left: auto;
+			right: 100%;
+		}
 	}
 
 
@@ -89,10 +143,16 @@
 	margin-left: -20px;
 	border-radius: 50%;
 	box-shadow: 0 0 0 5px lighten($silver, 10%);
+
+	@media screen and (max-width: $phone) {
+		left: 0;
+		margin-left: -40px;
+	}	
 }
 
 .is-hidden { visibility: hidden; }
 .bounce { @include animation(bounce-in .6s); }
+
 
 // .timeline {
 // 	width: 80%;

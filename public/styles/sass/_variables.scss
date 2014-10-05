@@ -1,7 +1,3 @@
-// @include font-face(Circular, '../../fonts/Circular/CircularStd-Book');
-// @include font-face(Circular, '../../fonts/Circular/CircularStd-Black', bold);
-// @include font-face(Circular, '../../fonts/Circular/CircularStd-BookItalic', normal, italic);
-
 @font-face {
 	font-family: Circular;
 	src: url('../../fonts/Circular/CircularStd-Book.otf') format('opentype');
@@ -30,3 +26,6 @@ $gold: #F3DC67;
 $gold-dark: #CFBC60;
 $bronze: #F9B28A;
 $bronze-dark: #F19561;
+
+$tablet: 1024px;
+$phone: 560px;

@@ -31,12 +31,6 @@ header {
 		ul li {
 			line-height: $header-small;
 		}
-
-		@media screen and (max-width: 1000px) {
-			#arrow {
-				top: -80px;
-			}
-		}
 	}
 
 	$arrow-width: 200px;
@@ -51,8 +45,8 @@ header {
 		z-index: 4;
 		@include transition(all .1s ease-in-out);
 
-		@media screen and (max-width: 1000px) {
-			top: -60px;
+		@media screen and (max-width: $tablet) {
+			display: none;
 		}
 	}
 
@@ -81,6 +75,10 @@ header {
 					text-decoration: underline;
 				}
 			}
+
+			@media screen and (max-width: $tablet) {
+				margin: 0 10px !important;
+			}
 		}
 
 		&#left {
@@ -100,6 +98,8 @@ header {
 		}
 	}
 }
+
+// mobile styles {}
 
 	// nav {
 	// 	padding: (($header - 20px) / 2) 0;

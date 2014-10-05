@@ -35,10 +35,8 @@
 		letter-spacing: 2px;
 	}
 
-	@media screen and (max-width: 1000px) {
-		h1 {
-			font-size: 4em;
-		}
+	@media screen and (max-width: $tablet) {
+		font-size: .8em;
 	}
 }
 
@@ -53,6 +51,12 @@
 
 	.blurred {
 		display: none;
+	}
+
+	@media screen and (max-width: $tablet) {
+		.regular {
+			background-position: 56%% 50%;
+		}
 	}
 
 	.section-content {
@@ -74,10 +78,14 @@
 		width: 100%;
 		@include box-sizing(border-box);
 
-		@media screen and (max-width: 1000px) {
-			font-size: .6em;
+		@media screen and (max-width: $tablet) {
 			height: 90px;
-			line-height: 70px;
+			width: 90%;
+			margin: 0 auto;
+
+			h2 {
+				font-size: .6em;
+			}
 		}
 	}
 
@@ -102,6 +110,12 @@
 	.blurred {
 		@include background-image(url('../../images/bg-pics/blurred/kiss-blurred.jpg'));
 	}
+
+	@media screen and (max-width: $tablet) {
+		.regular, .blurred {
+			background-position: 74% 50%;
+		}
+	}
 }
 
 #section-two {
@@ -122,6 +136,12 @@
 	.blurred {
 		@include background-image(url('../../images/bg-pics/blurred/dark-blurred.jpg'));
 	}
+
+	@media screen and (max-width: $tablet) {
+		.regular, .blurred {
+			background-position: 23% 50%;
+		}
+	}
 }
 
 #section-four {
@@ -131,6 +151,12 @@
 
 	.blurred {
 		@include background-image(url('../../images/bg-pics/blurred/piggyback-blurred.jpg'));
+	}
+
+	@media screen and (max-width: $tablet) {
+		.regular, .blurred {
+			background-position: 74% 50%;
+		}
 	}
 }
 
@@ -142,6 +168,12 @@
 	.blurred {
 		@include background-image(url('../../images/bg-pics/blurred/sunset-blurred.jpg'));
 	}
+
+	@media screen and (max-width: $tablet) {
+		.regular, .blurred {
+			background-position: 23% 50%;
+		}
+	}
 }
 
 #section-six {
@@ -152,6 +184,12 @@
 
 	.blurred {
 		@include background-image(url('../../images/bg-pics/blurred/sitting-blurred.jpg'));
+	}
+
+	@media screen and (max-width: $tablet) {
+		.regular, .blurred {
+			background-position: 23% 50%;
+		}
 	}
 }
 
