@@ -3,7 +3,6 @@
 	position: relative;
 	height: 100%;
 	opacity: 0;
-	@include background-image(url("../../images/bg-lines.png"));
 
 	#main {
 		height: 100%;
@@ -46,19 +45,21 @@
 #section-beginning {
 	display: table;
 	height: 100%;
+	margin-bottom: 50px;
 
 	.regular {
-		@include background-image(url('../../images/piggyback.jpg'));
+		@include background-image(url('../../images/bg-pics/plates.jpg'));
 	}
 
 	.blurred {
-		// @include background-image(url('../../images/piggyback.jpg'));
+		display: none;
 	}
 
 	.section-content {
 		display: table-cell;
 		vertical-align: middle;
 		width: 100%;
+		color: $white;
 	}	
 
 	#the-beginning {
@@ -93,33 +94,54 @@
 	}
 }
 
-#section-beach {
+#section-one {
 	.regular {
-		@include background-image(url('../../images/beach.jpg'));
+		@include background-image(url('../../images/bg-pics/kiss.jpg'));
 	}
 
 	.blurred {
-		@include background-image(url('../../images/beach-blurred.jpg'));
+		@include background-image(url('../../images/bg-pics/blurred/kiss-blurred.jpg'));
 	}
 }
 
-#section-piggyback {
+#section-two {
 	.regular {
-		@include background-image(url('../../images/piggyback.jpg'));
+		@include background-image(url('../../images/bg-pics/hold.jpg'));
 	}
 
 	.blurred {
-		@include background-image(url('../../images/piggyback-blurred.jpg'));
+		@include background-image(url('../../images/bg-pics/blurred/hold-blurred.jpg'));
 	}
 }
 
-#section-wheat {
+#section-three {
 	.regular {
-		@include background-image(url('../../images/wheat.jpg'));
+		@include background-image(url('../../images/bg-pics/dark.jpg'));
 	}
 
 	.blurred {
-		@include background-image(url('../../images/wheat-blurred.jpg'));
+		@include background-image(url('../../images/bg-pics/blurred/dark-blurred.jpg'));
+	}
+}
+
+#section-four {
+	.regular {
+		@include background-image(url('../../images/bg-pics/piggyback.jpg'));
+	}
+
+	.blurred {
+		@include background-image(url('../../images/bg-pics/blurred/piggyback-blurred.jpg'));
+	}
+}
+
+#section-five {
+	margin-bottom: 50px;
+	.regular {
+		@include background-image(url('../../images/bg-pics/sunset.jpg'));
+	}
+
+	.blurred {
+		@include background-image(url('../../images/bg-pics/blurred/sunset-blurred.jpg'));
 	}
 }
 
@@ -133,7 +155,7 @@
 
 
 #weekend {
-	@include background-image(url("../../images/bg-lines.png"));
+	@include background-image(url("../../images/bg-lines-2.png"));
 	@include background-size(cover);
 	background-attachment: fixed;
 	background-position: center;

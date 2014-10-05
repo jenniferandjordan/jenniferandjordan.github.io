@@ -33,3 +33,19 @@
   @include animation(fadeInDown $time normal);
  
 }
+
+@include keyframes(bounce-in) {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+ 
+  60% {
+    opacity: 1;
+    transform: scale(1.08);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}

@@ -1,9 +1,17 @@
 @import url(http://fonts.googleapis.com/css?family=Playfair+Display:400,700,400italic|Karla:400,700);
 $font-serif: 'Playfair Display', serif;
-$font-sans: 'Karla', Gill Sans, HelveticaNeue, Helvetica, sans-serif;
+$font-sans: 'Circular Std'; //'Karla', Gill Sans, HelveticaNeue, Helvetica, sans-serif;
 
 $white: #fff;
 $grey: #eee;
 $black: #303236;
 $white-o: rgba($white, .9);
+
 $red: #fe828c;
+$red-dark: #F35562;
+$silver: #BFBFBF;
+$silver-dark:darken($silver, 10%);
+$gold: #F3DC67;
+$gold-dark: #CFBC60;
+$bronze: #F9B28A;
+$bronze-dark: #F19561;

@@ -1,0 +1,203 @@
+.timeline {
+	padding: 8em 0;
+
+	&:before {
+		content: '';
+		width: 8px;
+		background: lighten($silver, 10%);
+		position: absolute;
+		left: 50%;
+		margin-left: -4px;
+		height: 100%;
+		top: 0;
+	}
+}
+
+.timeline-block {
+	width: 100%;
+	padding: 2em 0;
+	@include clearfix;
+}
+
+.timeline-content {
+	width: 45%;
+	float: left;
+	position: relative;
+	padding: 1.2em;
+	background: $silver;
+	border-radius: 4px;
+	border-width: 6px;
+	border-style: solid;
+	border-color: $silver-dark;
+	@include box-sizing(border-box);
+
+	&:before {
+		content: '';
+		position: absolute;
+		top: 12px;
+		height: 0;
+		width: 0;
+		border: 20px solid transparent;
+		border-left: 20px solid $silver-dark;
+		left: 100%;
+	}
+
+	&.pull-right {
+		float: right;
+		color: $white;
+		background: $red;
+		border-color: $red-dark;
+
+		&:before {
+			border-left: 20px solid transparent;
+			border-right: 20px solid $red-dark;
+			right: 100%;
+			left: auto;
+		}
+	}
+
+	&.is-hidden { visibility: hidden; }
+	&.bounce { @include animation(bounce-in .5s); }
+
+	h2 {
+		text-align: center;
+		text-transform: uppercase;
+		font-weight: 900;
+		font-family: $font-sans;
+		font-size: 1.4em;
+		margin-bottom: .4em;
+	}
+
+	p {
+		font-family: $font-sans;
+		font-size: 1.2em;
+		line-height: 1.3em;
+	}
+}
+
+
+// .timeline {
+// 	width: 80%;
+// 	// max-width: 800px;
+// 	display: block;
+// 	margin: 0 auto;
+// 	position: relative;
+// 	z-index: 3;
+// 	padding: 50% 0 10% 0;
+// 	@include box-sizing(border-box);
+// }
+
+// .timeline-block {
+// 	width: 100%;
+// 	max-width: 1000px;
+// 	display: block;
+// 	margin: 2em auto;
+// 	position: relative;
+// 	@include box-sizing(border-box);
+// 	@include clearfix;
+
+// 	.timeline-content {
+// 		width: 40%;
+// 		background: $silver;
+// 		padding: 1.2em;
+// 		border-radius: 4px;
+// 		color: $black;
+// 		position: relative;
+// 		float: left;
+// 		border-width: 8px;
+// 		border-style: solid;
+// 		border-color: $silver-dark;
+// 		@include box-sizing(border-box);
+
+// 		&.pull-right {
+// 			float: right;
+// 			border-color: $red-dark;
+// 			background: $red;
+// 			color: $white;
+			
+// 			&:before {
+// 				border-left: 20px solid transparent;
+// 				border-right: 20px solid $red-dark;
+// 				right: 100%;
+// 				left: auto;
+// 			}
+// 		}
+
+// 		// style the triangles
+// 		&:before {
+// 			content: '';
+// 			position: absolute;
+// 			top: 12px;
+// 			height: 0;
+// 			width: 0;
+// 			border: 20px solid transparent;
+// 			border-left: 20px solid $silver-dark;
+// 			left: 100%;
+// 		}
+
+// 		&.timeline-content-centered {
+// 			// margin: 0 auto;
+// 			// width: 100%;
+// 			// float: none;
+// 			background: rgba($grey, .4);
+// 			background-size: cover;
+// 			@include background-image(url("../../images/bg-lines-2.png"));
+// 			background-position: fixed;
+// 			border-color: $white;
+			
+// 			// top: 300px;
+// 			// position: fixed;
+// 			// left: 5%;
+// 			// width: 90%;
+
+// 			&:before {
+// 				display: none;
+// 			}
+
+// 			p {
+// 				color: $white;
+// 				font-size: 2em;
+// 				font-family: $font-serif;
+// 			}
+
+// 			li {
+// 				color: $white;
+// 			}
+// 		}
+
+// 		&.is-hidden {
+// 			visibility: hidden;
+// 		}
+
+// 		&.bounce-in {
+// 			visibility: visible;
+// 			@include animation(bounce-in .5s);
+// 		}
+
+// 		h2 {
+// 			font-family: $font-sans;
+// 			font-weight: bold;
+// 			text-transform: uppercase;
+// 			font-size: 1.5em;
+// 			padding-bottom: .4em;
+// 		}
+
+// 		p, li {
+// 			line-height: 1.6em;
+// 			margin-bottom: .4em;
+// 			font-size: 1.4em;
+// 			font-family: $font-sans;
+// 			font-weight: 100;
+
+// 			&.subtext {
+// 				font-size: 1em;
+// 				font-style: italic;
+// 			}
+// 		}
+
+// 		ul {
+// 			list-style-image: url('../../knot.png');
+// 			padding-left: 2em;
+// 		}
+// 	}
+// }

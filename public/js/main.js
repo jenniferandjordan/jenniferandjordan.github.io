@@ -84,7 +84,7 @@ function showTimelineBlock(st) {
 	$('.timeline-block').each(function(index) {
 		if ($(this).offset().top <= (st + wh*.8) && 
 			$(this).find('.timeline-content').hasClass('is-hidden') ) {
-			$(this).find('.timeline-content').removeClass('is-hidden').addClass('bounce-in');
+			$(this).find('.timeline-content').removeClass('is-hidden').addClass('bounce');
 		}
 	});
 }
