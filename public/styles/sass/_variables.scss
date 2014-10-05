@@ -1,6 +1,21 @@
+// @include font-face(Circular, '../../fonts/Circular/CircularStd-Book');
+// @include font-face(Circular, '../../fonts/Circular/CircularStd-Black', bold);
+// @include font-face(Circular, '../../fonts/Circular/CircularStd-BookItalic', normal, italic);
+
+@font-face {
+	font-family: Circular;
+	src: url('../../fonts/Circular/CircularStd-Book.otf') format('opentype');
+}
+
+@font-face {
+	font-family: Circular;
+	font-weight: bold;
+	src: url('../../fonts/Circular/CircularStd-Black.otf') format('opentype');
+}
+
 @import url(http://fonts.googleapis.com/css?family=Playfair+Display:400,700,400italic|Karla:400,700);
 $font-serif: 'Playfair Display', serif;
-$font-sans: 'Circular Std'; //'Karla', Gill Sans, HelveticaNeue, Helvetica, sans-serif;
+$font-sans: 'Circular'; //'Circular', Karla, Gill Sans, HelveticaNeue, Helvetica, sans-serif;
 
 $white: #fff;
 $grey: #eee;
