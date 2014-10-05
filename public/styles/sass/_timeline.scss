@@ -16,6 +16,7 @@
 .timeline-block {
 	width: 100%;
 	padding: 2em 0;
+	position: relative;
 	@include clearfix;
 }
 
@@ -56,8 +57,6 @@
 		}
 	}
 
-	&.is-hidden { visibility: hidden; }
-	&.bounce { @include animation(bounce-in .5s); }
 
 	h2 {
 		text-align: center;
@@ -75,6 +74,20 @@
 	}
 }
 
+.timeline-circle {
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	background: lighten($silver, 20%);;
+	top: 46px;
+	left: 50%;
+	margin-left: -20px;
+	border-radius: 50%;
+	box-shadow: 0 0 0 5px lighten($silver, 10%);
+}
+
+.is-hidden { visibility: hidden; }
+.bounce { @include animation(bounce-in .6s); }
 
 // .timeline {
 // 	width: 80%;

@@ -18,7 +18,7 @@ $(window).load(function() {
 });
 
 function init() {
-	$('.nav-link').click(function(e) {
+	$('header a').click(function(e) {
 		e.preventDefault();
 		var target = $(e.target).attr('href');
 		// var targetY = $(target).offset().top + 50;
@@ -84,6 +84,8 @@ function showTimelineBlock(st) {
 	$('.timeline-block').each(function(index) {
 		if ($(this).offset().top <= (st + wh*.8) && 
 			$(this).find('.timeline-content').hasClass('is-hidden') ) {
+
+			$(this).find('.timeline-circle').removeClass('is-hidden').addClass('bounce');
 			$(this).find('.timeline-content').removeClass('is-hidden').addClass('bounce');
 		}
 	});

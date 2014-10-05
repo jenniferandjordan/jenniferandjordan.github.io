@@ -76,6 +76,10 @@ header {
 				text-transform: uppercase;
 				font-size: 20px;
 				display: inline-block;
+
+				&:hover {
+					text-decoration: underline;
+				}
 			}
 		}
 
