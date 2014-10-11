@@ -162,23 +162,6 @@
 
 #section-five {
 	.regular {
-		@include background-image(url('../../images/bg-pics/sunset.jpg'));
-	}
-
-	.blurred {
-		@include background-image(url('../../images/bg-pics/blurred/sunset-blurred.jpg'));
-	}
-
-	@media screen and (max-width: $tablet) {
-		.regular, .blurred {
-			background-position: 23% 50%;
-		}
-	}
-}
-
-#section-six {
-	margin-bottom: 50px;
-	.regular {
 		@include background-image(url('../../images/bg-pics/sitting.jpg'));
 	}
 
@@ -193,55 +176,81 @@
 	}
 }
 
+#section-six {
+	margin-bottom: 50px;
+	.regular {
+		@include background-image(url('../../images/bg-pics/sunset.jpg'));
+	}
+
+	.blurred {
+		@include background-image(url('../../images/bg-pics/blurred/sunset-blurred.jpg'));
+	}
+
+	@media screen and (max-width: $tablet) {
+		.regular, .blurred {
+			background-position: 23% 50%;
+		}
+	}
+}
+
 //***************
 // text sections
 //***************
+
+#wedding {
+	margin-bottom: 50px;
+
+	.side {
+		background: $red;
+		color: $white;
+	}
+
+	.side-image {
+		@include background-image(url('../../images/montage.jpg'));
+	}
+}
+
+#travel {
+	margin-bottom: 50px;
+
+	.side {
+		background: $silver-dark;
+		color: $white;
+
+		a {
+			text-decoration: none;
+			color: darken($silver, 35%);
+		}
+	}
+
+	.side-image {
+		@include background-image(url('../../images/bg-pics/plates.jpg'));
+		background-position: 300% 50%;
+	}
+}
+
 #registry {
-	a {
-		text-align: center;
-		font-size: 1.7em;
-		text-decoration: none;
-		color: $red;
-		display: block;
-		padding: .5em 0;
-		position: relative;
-		@include box-sizing(border-box);
+	margin-bottom: 50px;
 
-		@media screen and (max-width: 1000px) {
-			font-size: 1.4em;
-		}
+	.side {
+		background: $orange;
+		color: $white;
 
-		&:before, &:after {
-			color: darken($red, 10%);
-			position: absolute;
-			top:.5em;
-			display: block;
-			opacity: 0;
-			@include transition(all .2s ease-in-out);
-		}
+		ul {
+			list-style: none;
 
-		&:before {
-			content: "[";
-			left: 40%;
-		}
-
-		&:after {
-			content: "]";
-			right: 40%;
-		}
-
-		&:hover {
-			color: darken($red, 10%);
-
-			&:before {
-				opacity: 1;
-				left: 26%;
+			li {
+				margin: .6em 0;
 			}
 
-			&:after {
-				opacity: 1;
-				right: 26%;
+			a {
+				text-decoration: none;
+				color: darken($orange, 35%);
 			}
 		}
+	}
+
+	.side-image {
+		@include background-image(url('../../images/montage.jpg'));
 	}
 }
