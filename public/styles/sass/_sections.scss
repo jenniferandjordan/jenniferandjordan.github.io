@@ -241,6 +241,10 @@
 
 			li {
 				margin: .6em 0;
+
+				@media screen and (max-width: $tablet) {
+					font-size: .8em;
+				}
 			}
 
 			a {
