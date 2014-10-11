@@ -10,6 +10,17 @@
 	<string>b7d299b0a34651d1a0e066786b75aa36168d5809</string>
 	<key>fonts</key>
 	<array>
+		<string>PlayfairDisplay-Bold</string>
+		<string>PlayfairDisplay-Bold</string>
+		<string>PlayfairDisplay-Regular</string>
+		<string>PlayfairDisplay-Regular</string>
+		<string>PlayfairDisplay-Bold</string>
+		<string>PlayfairDisplay-Regular</string>
+		<string>CircularStd-Black</string>
+		<string>PlayfairDisplay-Bold</string>
+		<string>PlayfairDisplay-Bold</string>
+		<string>PlayfairDisplay-Regular</string>
+		<string>CircularStd-Black</string>
 		<string>Karla-Regular</string>
 		<string>Karla-Regular</string>
 		<string>Karla-Regular</string>
@@ -39,7 +50,7 @@
 		<string>Karla-Regular</string>
 	</array>
 	<key>length</key>
-	<integer>8072764</integer>
+	<integer>11656120</integer>
 	<key>version</key>
 	<integer>18</integer>
 </dict>
