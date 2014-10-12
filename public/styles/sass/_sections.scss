@@ -50,7 +50,8 @@
 	}
 
 	.blurred {
-		display: none;
+		// display: none;
+		background: rgba(#797890, .8);
 	}
 
 	@media screen and (max-width: $tablet) {
@@ -68,20 +69,12 @@
 
 	#the-beginning {
 		font-family: $font-serif;
-		font-size: 4.6em;
+		font-size: 6em;
 		font-weight: bold;
 		text-transform: uppercase;
 		text-align: center;
-		padding: .2em 0;
-		border: 8px solid $white;
-		background: rgba($white, .3);
-		width: 100%;
-		@include box-sizing(border-box);
 
 		@media screen and (max-width: $tablet) {
-			height: 90px;
-			width: 90%;
-			margin: 0 auto;
 
 			h2 {
 				font-size: .6em;
@@ -201,12 +194,15 @@
 	margin-bottom: 50px;
 
 	.side {
-		background: $red;
+		background: $gold;
 		color: $white;
 	}
 
 	.side-image {
 		@include background-image(url('../../images/montage.jpg'));
+		background-size: cover;
+		background-attachment: fixed;
+		background-repeat: no-repeat;
 	}
 }
 
@@ -216,16 +212,11 @@
 	.side {
 		background: $silver-dark;
 		color: $white;
-
-		a {
-			text-decoration: none;
-			color: darken($silver, 35%);
-		}
 	}
 
 	.side-image {
-		@include background-image(url('../../images/bg-pics/plates.jpg'));
-		background-position: 300% 50%;
+		@include background-image(url('../../images/pattern-wedding-light.png'));
+		repeat: repeat;
 	}
 }
 
@@ -233,7 +224,7 @@
 	margin-bottom: 50px;
 
 	.side {
-		background: $orange;
+		background: $bronze;
 		color: $white;
 
 		ul {
@@ -246,15 +237,11 @@
 					font-size: .8em;
 				}
 			}
-
-			a {
-				text-decoration: none;
-				color: darken($orange, 35%);
-			}
 		}
 	}
 
 	.side-image {
-		@include background-image(url('../../images/montage.jpg'));
+		@include background-image(url('../../images/pattern-wedding-orange.png'));
+		repeat: repeat;
 	}
 }
