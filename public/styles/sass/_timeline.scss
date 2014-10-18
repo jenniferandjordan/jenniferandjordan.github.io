@@ -15,7 +15,7 @@
 	@media screen and (max-width: $phone) {
 
 		&:before {
-			left: 20px;
+			left: 10%;
 			margin-left: 0px;
 			width: 4px;
 		}
@@ -137,23 +137,65 @@
 	position: absolute;
 	width: 40px;
 	height: 40px;
-	background: lighten($silver, 20%);;
 	top: 46px;
 	left: 50%;
-	margin-left: -20px;
+	margin-left: -23px;
 	border-radius: 50%;
-	box-shadow: 0 0 0 5px lighten($silver, 10%);
+	// box-shadow: 0 0 6px darken($silver-dark, 10%);
+
+	&.circle-bowtie {
+		border: 4px solid lighten($silver, 10%);
+		background: lighten($silver, 20%);
+		@include background-image(url("../../images/icons/bowtie.png"));
+		background-repeat: no-repeat;
+		background-position-x: 5px;
+		background-position-y: 13.5px;
+		
+		@media screen and (max-width: $tablet) {
+			@include background-image(none);
+		}
+	}
+
+	&.circle-ring {
+		border: 4px solid $gold;
+		background: lighten($gold, 20%);
+		@include background-image(url("../../images/icons/ring.png"));
+		background-repeat: no-repeat;
+		background-position-x: 10px;
+		background-position-y: 6.5px;
+		
+		@media screen and (max-width: $tablet) {
+			@include background-image(none);
+		}
+	}
+
+	&.circle-heart {
+		border: 4px solid #D4A5A5;
+		background: $white;
+		@include background-image(url("../../images/icons/heart.png"));
+		background-repeat: no-repeat;
+		background-position-x: 6px;
+		background-position-y: 10px;
+		
+		@media screen and (max-width: $tablet) {
+			@include background-image(none);
+			border: 4px solid lighten($silver, 10%);
+			background: lighten($silver, 20%);
+		}
+	}
 
 	@media screen and (max-width: $tablet) {
 		width: 20px;
 		height: 20px;
-		margin-left: -10px;
+		margin-left: -13px;
 		top: 60px;
+		@include background-image(none);
+
 	}
 
 	@media screen and (max-width: $phone) {
-		left: 20px;
-		margin-left: -10px;
+		left: 0%;
+		margin-left: -8px;
 
 	}
 }
@@ -161,129 +203,3 @@
 .is-hidden { visibility: hidden; }
 .bounce { @include animation(bounce-in .6s); }
 
-
-// .timeline {
-// 	width: 80%;
-// 	// max-width: 800px;
-// 	display: block;
-// 	margin: 0 auto;
-// 	position: relative;
-// 	z-index: 3;
-// 	padding: 50% 0 10% 0;
-// 	@include box-sizing(border-box);
-// }
-
-// .timeline-block {
-// 	width: 100%;
-// 	max-width: 1000px;
-// 	display: block;
-// 	margin: 2em auto;
-// 	position: relative;
-// 	@include box-sizing(border-box);
-// 	@include clearfix;
-
-// 	.timeline-content {
-// 		width: 40%;
-// 		background: $silver;
-// 		padding: 1.2em;
-// 		border-radius: 4px;
-// 		color: $black;
-// 		position: relative;
-// 		float: left;
-// 		border-width: 8px;
-// 		border-style: solid;
-// 		border-color: $silver-dark;
-// 		@include box-sizing(border-box);
-
-// 		&.pull-right {
-// 			float: right;
-// 			border-color: $red-dark;
-// 			background: $red;
-// 			color: $white;
-			
-// 			&:before {
-// 				border-left: 20px solid transparent;
-// 				border-right: 20px solid $red-dark;
-// 				right: 100%;
-// 				left: auto;
-// 			}
-// 		}
-
-// 		// style the triangles
-// 		&:before {
-// 			content: '';
-// 			position: absolute;
-// 			top: 12px;
-// 			height: 0;
-// 			width: 0;
-// 			border: 20px solid transparent;
-// 			border-left: 20px solid $silver-dark;
-// 			left: 100%;
-// 		}
-
-// 		&.timeline-content-centered {
-// 			// margin: 0 auto;
-// 			// width: 100%;
-// 			// float: none;
-// 			background: rgba($grey, .4);
-// 			background-size: cover;
-// 			@include background-image(url("../../images/bg-lines-2.png"));
-// 			background-position: fixed;
-// 			border-color: $white;
-			
-// 			// top: 300px;
-// 			// position: fixed;
-// 			// left: 5%;
-// 			// width: 90%;
-
-// 			&:before {
-// 				display: none;
-// 			}
-
-// 			p {
-// 				color: $white;
-// 				font-size: 2em;
-// 				font-family: $font-serif;
-// 			}
-
-// 			li {
-// 				color: $white;
-// 			}
-// 		}
-
-// 		&.is-hidden {
-// 			visibility: hidden;
-// 		}
-
-// 		&.bounce-in {
-// 			visibility: visible;
-// 			@include animation(bounce-in .5s);
-// 		}
-
-// 		h2 {
-// 			font-family: $font-sans;
-// 			font-weight: bold;
-// 			text-transform: uppercase;
-// 			font-size: 1.5em;
-// 			padding-bottom: .4em;
-// 		}
-
-// 		p, li {
-// 			line-height: 1.6em;
-// 			margin-bottom: .4em;
-// 			font-size: 1.4em;
-// 			font-family: $font-sans;
-// 			font-weight: 100;
-
-// 			&.subtext {
-// 				font-size: 1em;
-// 				font-style: italic;
-// 			}
-// 		}
-
-// 		ul {
-// 			list-style-image: url('../../knot.png');
-// 			padding-left: 2em;
-// 		}
-// 	}
-// }

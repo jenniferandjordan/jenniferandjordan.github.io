@@ -18,6 +18,7 @@
 
 		span {
 			font-weight: 100;
+			color: $red;
 
 			@media screen and (max-width: 1000px) {
 				display: block;
@@ -31,7 +32,7 @@
 		margin-top: 60px;
 		font-family: $font-sans;
 		font-weight: 400;
-		font-size: 1.4em;
+		font-size: 1.7em;
 		letter-spacing: 1px;
 	}
 
@@ -139,11 +140,11 @@
 
 #section-four {
 	.regular {
-		@include background-image(url('../../images/bg-pics/piggyback.jpg'));
+		@include background-image(url('../../images/bg-pics/ocean.jpg'));
 	}
 
 	.blurred {
-		@include background-image(url('../../images/bg-pics/blurred/piggyback-blurred.jpg'));
+		@include background-image(url('../../images/bg-pics/blurred/ocean-blurred.jpg'));
 	}
 
 	@media screen and (max-width: $tablet) {
@@ -203,6 +204,7 @@
 		background-size: cover;
 		background-attachment: fixed;
 		background-repeat: no-repeat;
+		background-position-x: -600px;
 	}
 }
 
@@ -212,11 +214,15 @@
 	.side {
 		background: $silver-dark;
 		color: $white;
+		padding-bottom:3em;
 	}
 
 	.side-image {
-		@include background-image(url('../../images/pattern-wedding-light.png'));
-		repeat: repeat;
+		@include background-image(url('../../images/bg-pics/wall-2.jpg'));
+		background-repeat: no-repeat;
+	    background-size: 100% auto;
+	    background-position: center top;
+	    background-attachment: fixed;
 	}
 }
 
@@ -243,5 +249,6 @@
 	.side-image {
 		@include background-image(url('../../images/pattern-wedding-orange.png'));
 		repeat: repeat;
+		background-attachment: fixed;
 	}
 }

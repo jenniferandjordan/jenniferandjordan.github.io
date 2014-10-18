@@ -126,7 +126,12 @@ section {
 
 				a {
 					text-decoration: none;
+					border-bottom: 1px solid rgba($black, .7);
 					color: rgba($black, .7);
+
+					&:hover {
+						opacity: .6;						
+					}
 				}
 
 				&.padded {
