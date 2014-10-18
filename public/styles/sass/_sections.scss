@@ -19,6 +19,7 @@
 		span {
 			font-weight: 100;
 			color: $red;
+			// -webkit-text-stroke: 3px $black;
 
 			@media screen and (max-width: 1000px) {
 				display: block;
