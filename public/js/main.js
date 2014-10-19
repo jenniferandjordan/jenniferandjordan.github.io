@@ -91,12 +91,6 @@ function showTimelineBlock(st) {
 			$(this).find('.timeline-circle').removeClass('is-hidden').addClass('bounce');
 			$(this).find('.timeline-content').removeClass('is-hidden').addClass('bounce');
 		} 
-		// else if ( st > $(this).offset().top + $(this).height() && 
-		// 	$(this).find('.timeline-content').hasClass('bounce') ) {
-
-		// 	$(this).find('.timeline-circle').removeClass('bounce').addClass('is-hidden');
-		// 	$(this).find('.timeline-content').removeClass('bounce').addClass('is-hidden');
-		// }
 	});
 }
 
