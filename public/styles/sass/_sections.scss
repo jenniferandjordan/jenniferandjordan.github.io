@@ -19,7 +19,6 @@
 		span {
 			font-weight: 100;
 			color: $red;
-			// -webkit-text-stroke: 3px $black;
 
 			@media screen and (max-width: 1000px) {
 				display: block;
@@ -38,7 +37,7 @@
 	}
 
 	@media screen and (max-width: $tablet) {
-		font-size: .8em;
+		font-size: .6em;
 	}
 }
 
@@ -278,9 +277,14 @@
 			font-family: $font-serif;
 			font-size: 2em;
 			text-align: center;
+			font-weight: 900;
 
 			span {
 				color: $red;
+
+				@media screen and (max-width: $phone) {
+					display: block;
+				}
 			}
 		}
 

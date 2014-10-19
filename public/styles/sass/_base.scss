@@ -48,6 +48,12 @@ section {
 		}
 	}
 
+	&.mobile-hide {
+		@media screen and (max-width: $phone) {
+			display: none !important;
+		}
+	}
+
 	&.section-text {
 		min-height: 0;
 
