@@ -48,9 +48,11 @@
 		<string>Karla-Regular</string>
 		<string>Karla-Regular</string>
 		<string>Karla-Regular</string>
+		<string>CircularStd-Book</string>
+		<string>PlayfairDisplay-Regular</string>
 	</array>
 	<key>length</key>
-	<integer>14879950</integer>
+	<integer>15674294</integer>
 	<key>version</key>
 	<integer>18</integer>
 </dict>

@@ -196,8 +196,9 @@
 	margin-bottom: 50px;
 
 	.side {
-		background: $gold;
+		background: #7298CF;
 		color: $white;
+		padding-bottom: 4em;
 	}
 
 	.side-image {
@@ -205,7 +206,7 @@
 		background-size: cover;
 		background-attachment: fixed;
 		background-repeat: no-repeat;
-		background-position-x: -600px;
+		background-position-x: -500px;
 	}
 }
 
@@ -220,9 +221,8 @@
 
 	.side-image {
 		@include background-image(url('../../images/bg-pics/wall-2.jpg'));
+		background-size: cover;
 		background-repeat: no-repeat;
-	    background-size: 100% auto;
-	    background-position: center top;
 	    background-attachment: fixed;
 	}
 }
@@ -233,12 +233,13 @@
 	.side {
 		background: $bronze;
 		color: $white;
+		padding-bottom: 4em;
 
 		ul {
 			list-style: none;
 
 			li {
-				margin: .6em 0;
+				margin: 1em 0;
 
 				@media screen and (max-width: $tablet) {
 					font-size: .8em;
@@ -248,8 +249,57 @@
 	}
 
 	.side-image {
-		@include background-image(url('../../images/pattern-wedding-orange.png'));
+		@include background-image(url('../../images/pattern-wedding-mid.png'));
 		repeat: repeat;
 		background-attachment: fixed;
 	}
 }
+
+#note {
+	min-height: 0;
+	padding: 10em 0;
+
+	#card {
+		border: 4px solid $grey;
+		border-radius: 4px;
+		background: $white;
+		width: 100%;
+		padding: 2em;
+		position: relative;
+		@include box-sizing(border-box);
+
+		p {
+			font-family: $font-sans;
+			margin: .8em 0 2em 0;
+			text-align: center;
+		}
+
+		h3 {
+			font-family: $font-serif;
+			font-size: 2em;
+			text-align: center;
+
+			span {
+				color: $red;
+			}
+		}
+
+		#icon {
+			position: absolute;
+			left: 50%;
+			width: 60px;
+			height: 60px;
+			top: -40px;
+			margin-left: -30px;
+			border: 4px solid $red;
+			background: $grey;
+			border-radius: 50%;
+			@include background-image(url("../../images/icons/heart-2.png"));
+			background-repeat: no-repeat;
+			background-position-x: 10px;
+			background-position-y: 14px;
+		}
+	}
+}
+
+
